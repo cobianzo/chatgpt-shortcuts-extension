@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Mis prompts ChatGPT",
+  "version": "1.0",
+  "description": "Añade un botón al prompt de ChatGPT para guardar texto.",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js", "crud.js", "right-panel.js", "editor-panel.js"],
+      "css": ["styles.css"],
+      "type": "module"
+    }
+  ],
+  "icons": {
+    "48": "img/favicon48.png",
+    "64": "img/favicon64.png",
+    "128": "img/favicon128.png",
+    "256": "img/favicon256.png",
+    "512": "img/favicon512.png"
+  }
+}
